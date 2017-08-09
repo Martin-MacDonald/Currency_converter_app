@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">CurrencyConverter</string>
+    <string name="conv_title">Convert Currency</string>
+    <string name="spinner_and">and</string>
+    <string name="conv_default">1.04</string>
+
+    <string-array name="currency_types">
+        <item>AUD</item>
+        <item>CAD</item>
+        <item>EUR</item>
+        <item>GBP</item>
+        <item>HKD</item>
+        <item>USD</item>
+    </string-array>
+
+    <string name="convert_button">Convert</string>
 </resources>
