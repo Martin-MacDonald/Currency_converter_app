@@ -17,6 +17,7 @@ import com.loopj.android.http.RequestParams;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import cz.msebera.android.httpclient.Header;
 
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                mCurrencyOrigin = adapterView.getItemAtPosition(i).toString();
                 Log.d("Currency", "" + mCurrencyOrigin);
+
             }
 
             @Override
@@ -116,8 +118,12 @@ public class MainActivity extends AppCompatActivity {
     private void updateUI(Double rate){
         String currencyText = rate.toString();
         TextView currencyView = (TextView) findViewById(R.id.currency_view);
+        TextView convFrom = (TextView) findViewById(R.id.conv_from);
+        TextView convTo = (TextView) findViewById(R.id.conv_to);
 
         currencyView.setText(currencyText);
+        convFrom.setText(mCurrencyOrigin);
+        convTo.setText(mCurrencyDest);
     }
 
 }

@@ -7,64 +7,120 @@
     android:layout_height="match_parent"
     tools:context="com.example.martin.currencyconverter.MainActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/conv_title"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bgnd_image"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/conv_init"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_weight="1"
+        android:text="@string/initial_value"
+        android:textAlignment="viewEnd"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/conv_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/conv_from"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:layout_below="@+id/conv_init"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
         android:id="@+id/title"
-        android:layout_marginTop="151dp"
-        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/equals"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:layout_below="@+id/conv_from"
+        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"/>
 
     <TextView
         android:id="@+id/currency_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:text="@string/conv_default"
+        android:textAlignment="center"
+        android:textSize="30dp"
         android:layout_below="@+id/title"
+        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="62dp"/>
+/>
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/conv_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/conv_to"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:layout_below="@+id/currency_view"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+/>
+
+    <Spinner
+        android:id="@+id/currency_origin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="185dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/linearLayout">
+        android:layout_weight="1"
+        android:layout_marginBottom="30dp"
+        android:layout_above="@+id/and"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        />
 
-        <Spinner
-            android:id="@+id/currency_origin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/and"
+        android:layout_width="69dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/spinner_and"
+        android:layout_marginBottom="30dp"
+        android:layout_above="@+id/currency_dest"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textSize="30dp"/>
 
-        <TextView
-            android:id="@+id/and"
-            android:layout_width="69dp"
-            android:layout_height="wrap_content"
-            android:text="@string/spinner_and"/>
-
-        <Spinner
-            android:id="@+id/currency_dest"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-    </LinearLayout>
+    <Spinner
+        android:id="@+id/currency_dest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_above="@+id/convert_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:textAlignment="center"
+        />
 
     <Button
         android:id="@+id/convert_button"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/linearLayout"
+        android:layout_weight="1"
+        android:padding="20dp"
+        android:text="@string/convert_button"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="58dp"
-        android:text="@string/convert_button"/>
+        android:layout_alignBottom="@id/imageView"
+        android:layout_marginBottom="28dp"/>
 
 </RelativeLayout>

@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">CurrencyConverter</string>
-    <string name="conv_title">Convert Currency</string>
+    <string name="initial_value">1</string>
+    <string name="conv_from">AUD</string>
+    <string name="conv_to">AUD</string>
+    <string name="equals">=</string>
     <string name="spinner_and">and</string>
-    <string name="conv_default">1.04</string>
+    <string name="conv_default">1</string>
 
     <string-array name="currency_types">
         <item>AUD</item>
