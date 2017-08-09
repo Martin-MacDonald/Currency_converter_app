@@ -6,6 +6,7 @@
     <string name="equals">=</string>
     <string name="spinner_and">and</string>
     <string name="conv_default">1</string>
+    <string name="bgnd_image">Background Image</string>
 
     <string-array name="currency_types">
         <item>AUD</item>

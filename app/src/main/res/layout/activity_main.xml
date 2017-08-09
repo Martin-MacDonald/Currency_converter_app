@@ -8,10 +8,10 @@
     tools:context="com.example.martin.currencyconverter.MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/bgnd_image"
+        app:srcCompat="@drawable/bgnd_image_resize"
         android:scaleType="centerCrop"/>
 
     <TextView
@@ -19,10 +19,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:layout_weight="1"
         android:text="@string/initial_value"
         android:textAlignment="viewEnd"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"/>
 
@@ -30,10 +29,9 @@
         android:id="@+id/conv_from"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:text="@string/conv_from"
         android:textAlignment="center"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:layout_below="@+id/conv_init"
         android:layout_marginTop="5dp"
         android:layout_centerHorizontal="true"
@@ -43,10 +41,9 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:text="@string/equals"
         android:textAlignment="center"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:layout_below="@+id/conv_from"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"/>
@@ -55,10 +52,9 @@
         android:id="@+id/currency_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:text="@string/conv_default"
         android:textAlignment="center"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:layout_below="@+id/title"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
@@ -68,10 +64,9 @@
         android:id="@+id/conv_to"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:text="@string/conv_to"
         android:textAlignment="center"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:layout_below="@+id/currency_view"
         android:layout_marginTop="5dp"
         android:layout_centerHorizontal="true"
@@ -81,7 +76,6 @@
         android:id="@+id/currency_origin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:layout_marginBottom="30dp"
         android:layout_above="@+id/and"
         android:layout_centerHorizontal="true"
@@ -92,19 +86,17 @@
         android:id="@+id/and"
         android:layout_width="69dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:text="@string/spinner_and"
         android:layout_marginBottom="30dp"
         android:layout_above="@+id/currency_dest"
         android:layout_centerHorizontal="true"
         android:textAlignment="center"
-        android:textSize="30dp"/>
+        android:textSize="30sp"/>
 
     <Spinner
         android:id="@+id/currency_dest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:layout_above="@+id/convert_button"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"
@@ -116,11 +108,10 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:padding="20dp"
         android:text="@string/convert_button"
-        android:layout_centerHorizontal="true"
-        android:layout_alignBottom="@id/imageView"
-        android:layout_marginBottom="28dp"/>
+        android:layout_marginBottom="23dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
